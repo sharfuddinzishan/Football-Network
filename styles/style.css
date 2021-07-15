@@ -56,7 +56,7 @@ a
     transition: all 1s ease-out;
     margin-bottom: 5px;
   }
-  .fas
+  .banner-heading .fas
   {
     padding-left: 5px;
   }
@@ -73,20 +73,131 @@ a
 
 }
 
-  .banner-image img 
-  {
-    width: 550px;
+.banner-image img 
+{
+  width: 550px;
+}
+
+.banner-image:hover
+{
+  animation: anime-banner-image 2s ease-out;
+
+}
+
+@keyframes anime-banner-image 
+{
+  0% {
+      transform: translateY(-20px) scale(.9);
   }
-
-  .banner-image:hover
-  {
-    transform: scale(.9);
-    transition: transform 2s ease-in-out;
-    
+  50% {
+      transform: translateX(10px) scale(1.0);
   }
+  100% {
+      transform: translateY(-20px) scale(.9);
+  }
+}
 
 
-  /* ---------------------------------------------
+
+/* ---------------------------------------------
+                   Player Styles
+---------------------------------------------- */
+
+#players
+{
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  column-gap: 30px;
+  row-gap: 30px;
+  justify-content: center;
+  align-items: center;
+
+}
+.single-player
+{
+  padding: 12px;
+  box-shadow: 0px 0px 40px #00000026;
+  height: 465px;
+  overflow: hidden;
+}
+
+.player-pic
+{
+  width: 100%;
+  border-radius: 10px;
+}
+.player-pic:hover
+{
+  transform:skew(-10deg) scale3d(1.4,1.2,2.3);
+  transition: transform 1s ease-out;
+}
+.player-name h2{
+  font-weight: bold;
+  font-size: 170%;
+  line-height: 40px;
+  margin-top: 15px;
+  color: #18191f;
+}
+
+.single-player:hover .player-name h2
+{
+  transform: rotateX(360deg);
+  transition: transform 1s ease-in;
+}
+
+.player-description p 
+{
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: left;
+  margin: 10px 0 15px 0;
+  color: #6c6c6c;
+}
+
+
+/* --------------------------------
+            FOOTER STYLE
+---------------------------------- */
+
+footer 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.social-links 
+{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.social-links a 
+{
+  width: 50px;
+  height: 50px;
+  background-color: #E7E7E8;
+  border-radius: 30px;
+  margin-right: 15px;
+  color: #969BAB;
+  line-height: 50px;
+  text-align: center;
+  transition: all ease-in .4s;
+}
+.social-links a:hover 
+{
+  background-color: #10437A;
+  color:whitesmoke;
+}
+.copyright-text 
+{
+  font-size: 24px;
+}
+
+
+/* ---------------------------------------------
                    Responsive Styles
 ---------------------------------------------- */
   
@@ -97,7 +208,8 @@ a
     width: 90%;
   }
 }
-
+/********************************************************/
+/*******************************************************/
 @media only screen and (max-width: 1024px) 
 {
   .banner-image img 
@@ -105,7 +217,8 @@ a
     width: 80%;
   }
 }
-
+/********************************************************/
+/*******************************************************/
 @media only screen and (min-width: 320px) and (max-width: 768px) 
 {
   .banner-container 
@@ -125,8 +238,19 @@ a
   {
     width: 60%;
   }
-}
 
+   /* Players Section */
+   #players {
+    grid-template-columns: repeat(1, 250px);
+  }
+  .single-player img {
+    width: 215px;
+    height: 200px;
+  }
+
+}
+/********************************************************/
+/*******************************************************/
 @media only screen and (max-width: 319px) 
 {
   .banner-container 
@@ -147,6 +271,15 @@ a
   {
     width: 50%;
   }
+
+    /* Players Section */
+    #players {
+      grid-template-columns: repeat(1, 250px);
+    }
+    .single-player img {
+      width: 215px;
+      height: 200px;
+    }
 }
 
 

@@ -103,7 +103,7 @@ a
                    Player Styles
 ---------------------------------------------- */
 
-#players
+#players,#trainings
 {
   display: grid;
   grid-template-columns: repeat(3, 250px);
@@ -113,7 +113,7 @@ a
   align-items: center;
 
 }
-.single-player
+.single-player,.single-training
 {
   padding: 12px;
   box-shadow: 0px 0px 40px #00000026;
@@ -121,17 +121,17 @@ a
   overflow: hidden;
 }
 
-.player-pic
+.player-pic,.training-pic
 {
   width: 100%;
   border-radius: 10px;
 }
-.player-pic:hover
+.player-pic:hover, .training-pic:hover
 {
   transform:skew(-10deg) scale3d(1.4,1.2,2.3);
   transition: transform 1s ease-out;
 }
-.player-name h2{
+.player-name h2,.training-name h2{
   font-weight: bold;
   font-size: 170%;
   line-height: 40px;
@@ -139,13 +139,13 @@ a
   color: #18191f;
 }
 
-.single-player:hover .player-name h2
+.single-player:hover .player-name h2,.single-training:hover .training-name h2
 {
   transform: rotateX(360deg);
   transition: transform 1s ease-in;
 }
 
-.player-description p 
+.player-description p,.training-description p  
 {
   font-weight: normal;
   font-size: 16px;
@@ -153,6 +153,15 @@ a
   text-align: left;
   margin: 10px 0 15px 0;
   color: #6c6c6c;
+}
+
+/* --------------------------------
+            Training Camp STYLE
+---------------------------------- */
+.training-camp-heading
+{
+  font-size: 24px;
+  font-weight: bold;
 }
 
 /* --------------------------------
@@ -283,11 +292,11 @@ footer
   }
 
    /* Players Section */
-   #players 
+   #players,#trainings
    {
      grid-template-columns: repeat(1, 250px);
     }
-  .single-player img 
+  .single-player img,.single-training img  
   {
     width: 215px;
     height: 200px;
@@ -326,11 +335,11 @@ footer
   }
 
     /* Players Section */
-  #players 
+  #players,#trainings
   {
     grid-template-columns: repeat(1, 250px);
   }
-  .single-player img 
+  .single-player img,.single-training img  
   {
     width: 215px;
     height: 200px;

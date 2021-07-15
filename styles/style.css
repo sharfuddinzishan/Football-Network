@@ -212,6 +212,7 @@ footer
 /*******************************************************/
 @media only screen and (max-width: 1024px) 
 {
+  /* banner section */
   .banner-image img 
   {
     width: 80%;
@@ -221,6 +222,7 @@ footer
 /*******************************************************/
 @media only screen and (min-width: 320px) and (max-width: 768px) 
 {
+  /* Banner Section */
   .banner-container 
   {
     width: 100%;
@@ -240,12 +242,20 @@ footer
   }
 
    /* Players Section */
-   #players {
-    grid-template-columns: repeat(1, 250px);
-  }
-  .single-player img {
+   #players 
+   {
+     grid-template-columns: repeat(1, 250px);
+    }
+  .single-player img 
+  {
     width: 215px;
     height: 200px;
+  }
+
+  /* footer */
+    .footer-logo img 
+    {
+      width: 80%;
   }
 
 }
@@ -253,6 +263,7 @@ footer
 /*******************************************************/
 @media only screen and (max-width: 319px) 
 {
+  /* Banner Section */
   .banner-container 
   {
     width: 100%;
@@ -262,7 +273,8 @@ footer
     grid-template-columns: 1fr;
     grid-row-gap: 50px;
   }
-  .banner-heading h1{
+  .banner-heading h1
+  {
     inline-size: fit-content;
     font-size: 150%;
     line-height: normal;
@@ -273,13 +285,25 @@ footer
   }
 
     /* Players Section */
-    #players {
-      grid-template-columns: repeat(1, 250px);
+  #players 
+  {
+    grid-template-columns: repeat(1, 250px);
+  }
+  .single-player img 
+  {
+    width: 215px;
+    height: 200px;
+  }
+
+  /* Footer */
+  .social-links 
+    {
+      flex-direction: column;
     }
-    .single-player img {
-      width: 215px;
-      height: 200px;
-    }
+  .footer-logo img 
+  {
+    width: 50%;
+  }
 }
 
 
